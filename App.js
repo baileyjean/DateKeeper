@@ -1,11 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import photo from './assets/joe.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>DateKeeper: The Future of Romance</Text>
+      <Text style={styles.header}>
+        DateKeeper: The Future of Romance
+      </Text>
+      <Image source={photo} style={styles.photo} />
+      <Text style={styles.instructions}>
+        Welcome to DateKeeper - the new gatekeeper for all your romantic ideas and plans.
+      </Text>
+      <TouchableOpacity
+        onPress={() => alert('Thanks for the boops!')}
+        style={{ backgroundColor: '#888' }}>
+        <Text style={{ fontSize: 20, color: '#fff' }}>Boop Me</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +30,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    color: '#888', 
+    fontSize: 22,
+    margin: 5
+  },
+  photo: {
+    width: 250, 
+    height: 300, 
+    margin: 20
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    margin: 10
+  }
 });
