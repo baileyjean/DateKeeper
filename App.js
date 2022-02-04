@@ -2,22 +2,39 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import photo from './assets/joe.png';
+import * as ImagePicker from 'expo-image-picker';
 
 export default function App() {
+  let openImagePickerAsync = async () => {
+    let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+
+    if (permissionResult.granted === false){
+      alert("Permission to access photo is required, damnit!");
+      return;
+    }
+
+    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+    console.log(pickerResult);
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>
         DateKeeper: The Future of Romance
       </Text>
+
       <Image source={photo} style={styles.photo} />
+
       <Text style={styles.instructions}>
         Welcome to DateKeeper - the new gatekeeper for all your romantic ideas and plans.
       </Text>
+
       <TouchableOpacity
-        onPress={() => alert('Thanks for the boops!')}
+        onPress={openImagePickerAsync}
         style={styles.button}>
-        <Text style={styles.buttonText}>Boop Me</Text>
+        <Text style={styles.buttonText}>Upload New Photo</Text>
       </TouchableOpacity>
+
       <StatusBar style="auto" />
     </View>
   );
