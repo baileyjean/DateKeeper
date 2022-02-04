@@ -29,10 +29,26 @@ export default function App() {
   if (selectedImage !== null ) {
     return (
       <View style={styles.container}>
+        <Text style={styles.header}>
+        DateKeeper: The Future of Romance
+        </Text>
+
         <Image 
           source={{ uri: selectedImage.localUri }}
           style={styles.thumbnail}
         />
+
+        <Text style={styles.instructions}>
+          Welcome to DateKeeper - the new gatekeeper for all your romantic ideas and plans.
+        </Text>
+
+        <TouchableOpacity
+          onPress={openImagePickerAsync}
+          style={styles.button}>
+          <Text style={styles.buttonText}>Upload New Photo</Text>
+        </TouchableOpacity>
+
+        <StatusBar style="auto" />
       </View>
     )
   }
