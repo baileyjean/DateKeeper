@@ -15,8 +15,8 @@ export default function App() {
       </Text>
       <TouchableOpacity
         onPress={() => alert('Thanks for the boops!')}
-        style={{ backgroundColor: '#888' }}>
-        <Text style={{ fontSize: 20, color: '#fff' }}>Boop Me</Text>
+        style={styles.button}>
+        <Text style={styles.buttonText}>Boop Me</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
@@ -44,5 +44,14 @@ const styles = StyleSheet.create({
     color: '#888',
     fontSize: 18,
     margin: 10
+  },
+  button: { 
+    backgroundColor: '#888',
+    padding: 18,
+    borderRadius: 12
+  },
+  buttonText: { 
+    fontSize: 20, 
+    color: '#fff' 
   }
 });
