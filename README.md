@@ -1,13 +1,13 @@
 <!-- ![Nerdy Nomad Logo](./assets/images/Logo-NerdyNomad.png) -->
 # DateKeeper
 ## The Future of Romance
-### Created & Coded By Bailey Leavitt
-### Feb 2022
+#### Created & Coded By Bailey Leavitt
+#### Feb 2022
 
-### Connect with the Creator
+#### Connect with the Creator
 [Bailey's LinkedIn](https://www.linkedin.com/in/baileyleavitt/)
 
-### Behind the Scenes - Project Management
+#### Behind the Scenes - Project Management
 [Trello Board for DateKeeper](https://trello.com/b/2h2URmmg/datekeeper)
 
 <!-- ### Nerdy Nomad Deployment via Heroku
@@ -15,9 +15,12 @@
 ***
 
 ## Description
-Relationships can be such a wonderful thing, but how do you keep track of dates you want to go on, dates you've been on, and all the beautiful attributes of your partner? What about gift ideas? I can't tell you how many times I've scrambled to find the perfect gift for my partner, and it always feels like I could've put more thought into it once the gift is given. Or the number of times 
-
 With our busy lives, it seems nearly impossible to keep the romance and excitement alive in a relationship--there's just so much information to track! **DateKeeper** is here to help! 
+
+Relationships can be such a wonderful thing, but how do you keep track of dates you want to go on, dates you've been on, and all the beautiful attributes of your partner? What about gift ideas? I can't tell you how many times I've scrambled to find the perfect gift for my partner, and it always feels like I could've put more thought into it once the gift is given. Or the number of times I've come up with some AWESOME date idea that never gets implemented because I keep forgetting about it. 
+
+**DateKeeper** removes all the frustration from this part of your romantic life, and makes it easy for you and your partner to enjoy each other. Let **DateKeeper** be the brains for your heart. <3
+
 ***
 ## Tech Used
 React Native | Expo | JavaScript (ES6) | HTML5 | CSS3
