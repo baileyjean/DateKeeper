@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import photo from './assets/joe.png';
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import * as ImagePicker from 'expo-image-picker';
+import photo from './assets/joe.png';
 
 export default function App() {
   // STATE VARIABLES
@@ -30,7 +32,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Text style={styles.header}>
-        DateKeeper: The Future of Romance
+        Cupid's Quiver
         </Text>
 
         <Image 
@@ -39,7 +41,7 @@ export default function App() {
         />
 
         <Text style={styles.instructions}>
-          Welcome to DateKeeper - the new gatekeeper for all your romantic ideas and plans.
+          Welcome to Cupid's Quiver - the vessel to house all your romantic ideas and plans.
         </Text>
 
         <TouchableOpacity
