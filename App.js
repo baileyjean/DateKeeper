@@ -2,74 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as ImagePicker from 'expo-image-picker';
 import photo from './assets/joe.png';
 
 // VARIABLES
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
 // FUNCTIONS
-
-function HomeTab({navigation}){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="Wishlist" component={Wishlist} />
-      <Tab.Screen name="PartnerStats" component={PartnerStats} />
-      <Tab.Screen name="DateHistory" component={DateHistory} />
-      <Tab.Screen name="GiftIdeas" component={GiftIdeas} />
-    </Tab.Navigator>
-  );
-}
-
-function WishlistTab({navigation}){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="PartnerStats" component={PartnerStats} />
-      <Tab.Screen name="DateHistory" component={DateHistory} />
-      <Tab.Screen name="GiftIdeas" component={GiftIdeas} />
-    </Tab.Navigator>
-  );
-}
-
-function PartnerStatsTab({navigation}){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Wishlist" component={Wishlist} />
-      <Tab.Screen name="DateHistory" component={DateHistory} />
-      <Tab.Screen name="GiftIdeas" component={GiftIdeas} />
-    </Tab.Navigator>
-  );
-}
-
-function DateHistoryTab({navigation}){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Wishlist" component={Wishlist} />
-      <Tab.Screen name="PartnerStats" component={PartnerStats} />
-      <Tab.Screen name="GiftIdeas" component={GiftIdeas} />
-    </Tab.Navigator>
-  );
-}
-
-function GiftIdeasTab({navigation}){
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Wishlist" component={Wishlist} />
-      <Tab.Screen name="PartnerStats" component={PartnerStats} />
-      <Tab.Screen name="DateHistory" component={DateHistory} />
-    </Tab.Navigator>
-  );
-}
-
 function Home({ navigation }) {
   return (
     <View style={styles.container}>
@@ -132,11 +72,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeTab} />
-        <Drawer.Screen name="Wishlist" component={WishlistTab} />
-        <Drawer.Screen name="PartnerStats" component={PartnerStatsTab} />
-        <Drawer.Screen name="DateHistory" component={DateHistoryTab} />
-        <Drawer.Screen name="GiftIdeas" component={GiftIdeasTab} />
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Date Wishlist" component={Wishlist} />
+        <Drawer.Screen name="Partner Stats" component={PartnerStats} />
+        <Drawer.Screen name="Date History" component={DateHistory} />
+        <Drawer.Screen name="Gift Ideas" component={GiftIdeas} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
